@@ -4,13 +4,13 @@
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
@@ -95,6 +95,14 @@ function nowTime() {
   var d = new Date();
   return pad(d.getHours()) + ":" + pad(d.getMinutes());
 }
+function isoToDate(iso) {
+  var d = new Date(iso);
+  return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+}
+function isoToTime(iso) {
+  var d = new Date(iso);
+  return pad(d.getHours()) + ":" + pad(d.getMinutes());
+}
 function fmtShort(iso) {
   var d = new Date(iso);
   return pad(d.getMonth() + 1) + "/" + pad(d.getDate()) + " " + pad(d.getHours()) + ":" + pad(d.getMinutes());
@@ -107,14 +115,15 @@ function LevelPicker(_ref) {
   var value = _ref.value,
     onChange = _ref.onChange,
     color = _ref.color;
-  return React.createElement('div', {
+  var e = React.createElement;
+  return e('div', {
     style: {
       display: "flex",
       gap: 6
     }
   }, [1, 2, 3, 4, 5].map(function (n) {
     var active = value === n;
-    return React.createElement('button', {
+    return e('button', {
       key: n,
       onClick: function onClick() {
         return onChange(n === value ? 0 : n);
@@ -139,13 +148,14 @@ function LevelPicker(_ref) {
 function ScoreBar(_ref2) {
   var value = _ref2.value,
     color = _ref2.color;
-  return React.createElement('div', {
+  var e = React.createElement;
+  return e('div', {
     style: {
       display: "flex",
       gap: 3
     }
   }, [1, 2, 3, 4, 5].map(function (n) {
-    return React.createElement('div', {
+    return e('div', {
       key: n,
       style: {
         height: 6,
@@ -158,15 +168,15 @@ function ScoreBar(_ref2) {
 }
 function AnalysisText(_ref3) {
   var text = _ref3.text;
-  var lines = text.split("\n");
-  return React.createElement('div', {
+  var e = React.createElement;
+  return e('div', {
     style: {
       fontSize: 15,
       lineHeight: 1.75,
       color: "#1C1C1E"
     }
-  }, lines.map(function (line, i) {
-    if (line.startsWith("## ")) return React.createElement('div', {
+  }, text.split("\n").map(function (line, i) {
+    if (line.startsWith("## ")) return e('div', {
       key: i,
       style: {
         fontSize: 17,
@@ -175,7 +185,7 @@ function AnalysisText(_ref3) {
         marginBottom: 6
       }
     }, line.replace("## ", ""));
-    if (line.startsWith("# ")) return React.createElement('div', {
+    if (line.startsWith("# ")) return e('div', {
       key: i,
       style: {
         fontSize: 19,
@@ -184,26 +194,26 @@ function AnalysisText(_ref3) {
         marginBottom: 8
       }
     }, line.replace("# ", ""));
-    if (line.startsWith("- ") || line.startsWith("• ")) return React.createElement('div', {
+    if (line.startsWith("- ") || line.startsWith("• ")) return e('div', {
       key: i,
       style: {
         display: "flex",
         gap: 8,
         marginBottom: 5
       }
-    }, React.createElement('span', {
+    }, e('span', {
       style: {
         color: "#007AFF",
         flexShrink: 0
       }
-    }, "•"), React.createElement('span', null, line.replace(/^[-•] /, "")));
-    if (line.trim() === "") return React.createElement('div', {
+    }, "•"), e('span', null, line.replace(/^[-•] /, "")));
+    if (line.trim() === "") return e('div', {
       key: i,
       style: {
         height: 8
       }
     });
-    return React.createElement('div', {
+    return e('div', {
       key: i,
       style: {
         marginBottom: 3
@@ -211,119 +221,333 @@ function AnalysisText(_ref3) {
     }, line);
   }));
 }
-function App() {
-  var _useState = useState("record"),
+
+// 記録フォーム（新規・編集共通）
+function RecordForm(_ref4) {
+  var initial = _ref4.initial,
+    onSave = _ref4.onSave,
+    onCancel = _ref4.onCancel,
+    isEdit = _ref4.isEdit;
+  var e = React.createElement;
+  var _useState = useState(initial ? isoToDate(initial.datetime) : nowDate()),
     _useState2 = _slicedToArray(_useState, 2),
-    tab = _useState2[0],
-    setTab = _useState2[1];
-  var _useState3 = useState([]),
+    dtDate = _useState2[0],
+    setDtDate = _useState2[1];
+  var _useState3 = useState(initial ? isoToTime(initial.datetime) : nowTime()),
     _useState4 = _slicedToArray(_useState3, 2),
-    entries = _useState4[0],
-    setEntries = _useState4[1];
-  var _useState5 = useState(nowDate()),
+    dtTime = _useState4[0],
+    setDtTime = _useState4[1];
+  var _useState5 = useState(initial ? initial.weather : "晴れ"),
     _useState6 = _slicedToArray(_useState5, 2),
-    dtDate = _useState6[0],
-    setDtDate = _useState6[1];
-  var _useState7 = useState(nowTime()),
-    _useState8 = _slicedToArray(_useState7, 2),
-    dtTime = _useState8[0],
-    setDtTime = _useState8[1];
-  var _useState9 = useState("晴れ"),
-    _useState0 = _slicedToArray(_useState9, 2),
-    weather = _useState0[0],
-    setWeather = _useState0[1];
-  var _useState1 = useState({
+    weather = _useState6[0],
+    setWeather = _useState6[1];
+  var _useState7 = useState(initial ? {
+      itch: initial.itch,
+      redness: initial.redness,
+      flush: initial.flush || 0
+    } : {
       itch: 0,
       redness: 0,
       flush: 0
     }),
+    _useState8 = _slicedToArray(_useState7, 2),
+    levels = _useState8[0],
+    setLevels = _useState8[1];
+  var _useState9 = useState(initial ? initial.food || "" : ""),
+    _useState0 = _slicedToArray(_useState9, 2),
+    food = _useState0[0],
+    setFood = _useState0[1];
+  var _useState1 = useState(initial ? initial.note || "" : ""),
     _useState10 = _slicedToArray(_useState1, 2),
-    levels = _useState10[0],
-    setLevels = _useState10[1];
-  var _useState11 = useState(""),
+    note = _useState10[0],
+    setNote = _useState10[1];
+  var _useState11 = useState(false),
     _useState12 = _slicedToArray(_useState11, 2),
-    note = _useState12[0],
-    setNote = _useState12[1];
-  var _useState13 = useState(false),
+    saved = _useState12[0],
+    setSaved = _useState12[1];
+  var canSave = levels.itch > 0 && levels.redness > 0 && levels.flush > 0;
+  var inp = {
+    width: "100%",
+    padding: "10px 12px",
+    borderRadius: 10,
+    border: "1px solid #E5E5EA",
+    background: "#F2F2F7",
+    fontSize: 14,
+    color: "#1C1C1E",
+    outline: "none",
+    boxSizing: "border-box"
+  };
+  var card = {
+    background: "#fff",
+    borderRadius: 18,
+    padding: "16px 18px",
+    marginBottom: 12,
+    boxShadow: "0 1px 3px rgba(0,0,0,0.06),0 4px 16px rgba(0,0,0,0.04)"
+  };
+  var sLabel = {
+    fontSize: 13,
+    fontWeight: 600,
+    color: "#8E8E93",
+    textTransform: "uppercase",
+    letterSpacing: "0.5px",
+    marginBottom: 10,
+    display: "block"
+  };
+  function handleSave() {
+    if (!canSave) return;
+    var entry = {
+      id: initial ? initial.id : Date.now(),
+      datetime: new Date(dtDate + "T" + dtTime).toISOString(),
+      weather: weather,
+      itch: levels.itch,
+      redness: levels.redness,
+      flush: levels.flush,
+      food: food,
+      note: note
+    };
+    onSave(entry);
+    if (!isEdit) {
+      setSaved(true);
+      setTimeout(function () {
+        return setSaved(false);
+      }, 1600);
+    }
+  }
+  return e.apply(void 0, ['div', {
+    style: {
+      padding: "16px 16px 20px"
+    }
+  }, isEdit && e('button', {
+    onClick: onCancel,
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      background: "none",
+      border: "none",
+      color: "#007AFF",
+      fontSize: 16,
+      cursor: "pointer",
+      marginBottom: 16,
+      padding: 0
+    }
+  }, "← 履歴に戻る"), e('div', {
+    style: card
+  }, e('span', {
+    style: sLabel
+  }, "日時"), e('div', {
+    style: {
+      display: "flex",
+      gap: 8
+    }
+  }, e('input', {
+    type: "date",
+    value: dtDate,
+    onChange: function onChange(ev) {
+      return setDtDate(ev.target.value);
+    },
+    style: _objectSpread(_objectSpread({}, inp), {}, {
+      flex: 1,
+      minWidth: 0
+    })
+  }), e('input', {
+    type: "time",
+    value: dtTime,
+    onChange: function onChange(ev) {
+      return setDtTime(ev.target.value);
+    },
+    style: _objectSpread(_objectSpread({}, inp), {}, {
+      width: 90,
+      flex: "none",
+      minWidth: 0
+    })
+  }))), e('div', {
+    style: card
+  }, e('span', {
+    style: sLabel
+  }, "天気"), e('div', {
+    style: {
+      display: "flex",
+      gap: 8,
+      flexWrap: "wrap"
+    }
+  }, WEATHER_OPTIONS.map(function (w) {
+    return e('button', {
+      key: w.label,
+      onClick: function onClick() {
+        return setWeather(w.label);
+      },
+      style: {
+        padding: "9px 14px",
+        borderRadius: 12,
+        border: "none",
+        cursor: "pointer",
+        fontSize: 14,
+        fontWeight: 600,
+        background: weather === w.label ? "#007AFF" : "#F2F2F7",
+        color: weather === w.label ? "#fff" : "#3C3C43",
+        boxShadow: weather === w.label ? "0 2px 8px rgba(0,122,255,0.3)" : "none",
+        transition: "all 0.15s"
+      }
+    }, w.emoji + " " + w.label);
+  })))].concat(_toConsumableArray(METRICS.map(function (m) {
+    return e('div', {
+      key: m.key,
+      style: card
+    }, e('div', {
+      style: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 12
+      }
+    }, e('span', {
+      style: sLabel
+    }, m.label), levels[m.key] > 0 && e('span', {
+      style: {
+        fontSize: 13,
+        fontWeight: 600,
+        color: m.color
+      }
+    }, LEVEL_LABELS[levels[m.key]])), e(LevelPicker, {
+      value: levels[m.key],
+      onChange: function onChange(v) {
+        return setLevels(function (p) {
+          return _objectSpread(_objectSpread({}, p), {}, _defineProperty({}, m.key, v));
+        });
+      },
+      color: m.color
+    }));
+  })), [e('div', {
+    style: card
+  }, e('span', {
+    style: sLabel
+  }, "食べ物（任意）"), e('input', {
+    type: "text",
+    value: food,
+    onChange: function onChange(ev) {
+      return setFood(ev.target.value);
+    },
+    placeholder: "例：チョコレート、アルコール、小麦...",
+    style: inp
+  })), e('div', {
+    style: card
+  }, e('span', {
+    style: sLabel
+  }, "備考（任意）"), e('textarea', {
+    value: note,
+    onChange: function onChange(ev) {
+      return setNote(ev.target.value);
+    },
+    placeholder: "気になることや状況など...",
+    style: _objectSpread(_objectSpread({}, inp), {}, {
+      resize: "vertical",
+      minHeight: 80,
+      fontFamily: "inherit",
+      lineHeight: 1.5
+    })
+  })), e('button', {
+    onClick: handleSave,
+    disabled: !canSave,
+    style: {
+      width: "100%",
+      padding: "16px",
+      borderRadius: 16,
+      border: "none",
+      cursor: canSave ? "pointer" : "not-allowed",
+      background: saved ? "#34C759" : canSave ? "#007AFF" : "#E5E5EA",
+      color: canSave || saved ? "#fff" : "#C7C7CC",
+      fontSize: 17,
+      fontWeight: 600,
+      boxShadow: canSave ? saved ? "0 4px 16px rgba(52,199,89,0.4)" : "0 4px 16px rgba(0,122,255,0.35)" : "none",
+      transition: "all 0.25s"
+    }
+  }, saved ? "✓ 保存しました" : isEdit ? "更新する" : "保存する"), !canSave && e('div', {
+    style: {
+      textAlign: "center",
+      fontSize: 13,
+      color: "#8E8E93",
+      marginTop: 10
+    }
+  }, "3項目すべてのレベルを選んでください")]));
+}
+function App() {
+  var e = React.createElement;
+  var _useState13 = useState("record"),
     _useState14 = _slicedToArray(_useState13, 2),
-    saved = _useState14[0],
-    setSaved = _useState14[1];
-  var _useState15 = useState(""),
+    tab = _useState14[0],
+    setTab = _useState14[1];
+  var _useState15 = useState([]),
     _useState16 = _slicedToArray(_useState15, 2),
-    analysis = _useState16[0],
-    setAnalysis = _useState16[1];
-  var _useState17 = useState(false),
+    entries = _useState16[0],
+    setEntries = _useState16[1];
+  var _useState17 = useState(null),
     _useState18 = _slicedToArray(_useState17, 2),
-    analyzing = _useState18[0],
-    setAnalyzing = _useState18[1];
+    editEntry = _useState18[0],
+    setEditEntry = _useState18[1]; // 編集中のレコード
   var _useState19 = useState(""),
     _useState20 = _slicedToArray(_useState19, 2),
-    apiKey = _useState20[0],
-    setApiKey = _useState20[1];
+    analysis = _useState20[0],
+    setAnalysis = _useState20[1];
   var _useState21 = useState(false),
     _useState22 = _slicedToArray(_useState21, 2),
-    apiKeySaved = _useState22[0],
-    setApiKeySaved = _useState22[1];
+    analyzing = _useState22[0],
+    setAnalyzing = _useState22[1];
+  var _useState23 = useState(""),
+    _useState24 = _slicedToArray(_useState23, 2),
+    apiKey = _useState24[0],
+    setApiKey = _useState24[1];
+  var _useState25 = useState(false),
+    _useState26 = _slicedToArray(_useState25, 2),
+    apiKeySaved = _useState26[0],
+    setApiKeySaved = _useState26[1];
   useEffect(function () {
     try {
-      var _e = localStorage.getItem("ibugrise-entries");
-      if (_e) setEntries(JSON.parse(_e));
+      var saved = localStorage.getItem("ibugrise-entries");
+      if (saved) setEntries(JSON.parse(saved));
       var k = localStorage.getItem("ibugrise-apikey");
       if (k) setApiKey(k);
     } catch (err) {
       console.error(err);
     }
   }, []);
-  useEffect(function () {
-    if (tab === "record") {
-      setDtDate(nowDate());
-      setDtTime(nowTime());
-    }
-  }, [tab]);
   function persist(list) {
     setEntries(list);
     try {
       localStorage.setItem("ibugrise-entries", JSON.stringify(list));
-    } catch (e) {
-      console.error(e);
+    } catch (err) {
+      console.error(err);
     }
   }
-  function save() {
-    var itch = levels.itch,
-      redness = levels.redness,
-      flush = levels.flush;
-    if (!itch || !redness || !flush) return;
-    var entry = {
-      id: Date.now(),
-      datetime: new Date(dtDate + "T" + dtTime).toISOString(),
-      weather: weather,
-      itch: itch,
-      redness: redness,
-      flush: flush,
-      note: note
-    };
+  function handleSaveNew(entry) {
     var list = [entry].concat(_toConsumableArray(entries)).sort(function (a, b) {
       return new Date(b.datetime) - new Date(a.datetime);
     });
     persist(list);
-    setSaved(true);
-    setTimeout(function () {
-      setSaved(false);
-      setDtDate(nowDate());
-      setDtTime(nowTime());
-      setWeather("晴れ");
-      setLevels({
-        itch: 0,
-        redness: 0,
-        flush: 0
-      });
-      setNote("");
-    }, 1600);
+  }
+  function handleSaveEdit(entry) {
+    var list = entries.map(function (en) {
+      return en.id === entry.id ? entry : en;
+    }).sort(function (a, b) {
+      return new Date(b.datetime) - new Date(a.datetime);
+    });
+    persist(list);
+    setEditEntry(null);
+    setTab("history");
+  }
+  function handleDelete(id) {
+    if (!window.confirm("このレコードを削除しますか？")) return;
+    var list = entries.filter(function (en) {
+      return en.id !== id;
+    });
+    persist(list);
+    setEditEntry(null);
+    setTab("history");
   }
   function saveApiKey() {
     try {
       localStorage.setItem("ibugrise-apikey", apiKey);
-    } catch (e) {}
+    } catch (err) {}
     setApiKeySaved(true);
     setTimeout(function () {
       return setApiKeySaved(false);
@@ -354,8 +578,8 @@ function App() {
             setAnalyzing(true);
             setAnalysis("");
             _context.p = 3;
-            summary = entries.map(function (e) {
-              return fmtFull(e.datetime) + " / 天気:" + e.weather + " / かゆみ:" + e.itch + " / 赤み:" + e.redness + " / 火照り:" + (e.flush || 0) + (e.note ? " / 備考:" + e.note : "");
+            summary = entries.map(function (en) {
+              return fmtFull(en.datetime) + " / 天気:" + en.weather + " / かゆみ:" + en.itch + " / 赤み:" + en.redness + " / 火照り:" + (en.flush || 0) + (en.food ? " / 食べ物:" + en.food : "") + (en.note ? " / 備考:" + en.note : "");
             }).join("\n");
             _context.n = 4;
             return fetch("https://api.anthropic.com/v1/messages", {
@@ -368,10 +592,10 @@ function App() {
               },
               body: JSON.stringify({
                 model: "claude-sonnet-4-20250514",
-                max_tokens: 1500,
+                max_tokens: 2000,
                 messages: [{
                   role: "user",
-                  content: "以下はイブグリース（アトピー性皮膚炎）の記録データです。全データを分析して、以下の観点で日本語でわかりやすく教えてください。マークダウンの見出し（##）や箇条書き（-）を使って整理してください。\n\n## 分析してほしいこと\n- 全体的なトレンド（改善傾向・悪化傾向）\n- 症状が悪化しやすいパターンや時間帯・天気との関係\n- かゆみ・赤み・火照りそれぞれの特徴\n- 備考欄から読み取れること（あれば）\n- 改善のためのアドバイス\n\n## 記録データ\n" + summary + "\n\nデータ件数: 全" + entries.length + "件"
+                  content: "以下はイブグリース（アトピー性皮膚炎）の記録データです。全データを詳しく分析してください。マークダウンの見出し（##）や箇条書き（-）を使って整理してください。\n\n" + "## 分析してほしいこと\n" + "- 天気と症状（かゆみ・赤み・火照り）の相関関係\n" + "- 食べ物と症状の相関関係（食べ物の記録がある場合）\n" + "- 備考の内容と症状の相関関係\n" + "- 時間帯・曜日などのパターン\n" + "- 全体を通しての気づきとまとめ\n" + "- 改善のための具体的なアドバイス\n\n" + "## 記録データ\n" + summary + "\n\nデータ件数: 全" + entries.length + "件"
                 }]
               })
             });
@@ -406,15 +630,14 @@ function App() {
     }));
     return _analyze.apply(this, arguments);
   }
-  var canSave = levels.itch > 0 && levels.redness > 0 && levels.flush > 0;
   var recent7 = entries.slice(0, 7);
-  var graphData = _toConsumableArray(entries).reverse().slice(-20).map(function (e) {
+  var graphData = _toConsumableArray(entries).reverse().slice(-20).map(function (en) {
     var obj = {
-      t: fmtShort(e.datetime)
+      t: fmtShort(en.datetime)
     };
-    obj["かゆみ"] = e.itch;
-    obj["赤み"] = e.redness;
-    obj["火照り"] = e.flush || 0;
+    obj["かゆみ"] = en.itch;
+    obj["赤み"] = en.redness;
+    obj["火照り"] = en.flush || 0;
     return obj;
   });
   var card = {
@@ -447,38 +670,17 @@ function App() {
   var tabTitles = {
     record: "イブグリース記録",
     graph: "グラフ",
-    history: "履歴",
+    history: editEntry ? "編集" : "履歴",
     analyze: "AI分析",
     settings: "設定"
   };
   var tabSubs = {
     record: "日時は変更できます",
     graph: entries.length + "件の記録",
-    history: "全" + entries.length + "件",
+    history: editEntry ? fmtFull(editEntry.datetime) : "全" + entries.length + "件",
     analyze: "記録から傾向を分析",
     settings: "APIキーなどの設定"
   };
-  var e = React.createElement;
-  function WeatherBtn(w) {
-    return e('button', {
-      key: w.label,
-      onClick: function onClick() {
-        return setWeather(w.label);
-      },
-      style: {
-        padding: "9px 14px",
-        borderRadius: 12,
-        border: "none",
-        cursor: "pointer",
-        fontSize: 14,
-        fontWeight: 600,
-        background: weather === w.label ? "#007AFF" : "#F2F2F7",
-        color: weather === w.label ? "#fff" : "#3C3C43",
-        boxShadow: weather === w.label ? "0 2px 8px rgba(0,122,255,0.3)" : "none",
-        transition: "all 0.15s"
-      }
-    }, w.emoji + " " + w.label);
-  }
   return e('div', {
     style: {
       minHeight: "100vh",
@@ -524,118 +726,12 @@ function App() {
     }
   },
   // 記録タブ
-  tab === "record" && e.apply(void 0, ['div', {
-    style: {
-      padding: "16px 16px 20px"
-    }
-  }, e('div', {
-    style: card
-  }, e('span', {
-    style: sLabel
-  }, "日時"), e('div', {
-    style: {
-      display: "flex",
-      gap: 8
-    }
-  }, e('input', {
-    type: "date",
-    value: dtDate,
-    onChange: function onChange(ev) {
-      return setDtDate(ev.target.value);
-    },
-    style: _objectSpread(_objectSpread({}, inp), {}, {
-      flex: 1,
-      minWidth: 0
-    })
-  }), e('input', {
-    type: "time",
-    value: dtTime,
-    onChange: function onChange(ev) {
-      return setDtTime(ev.target.value);
-    },
-    style: _objectSpread(_objectSpread({}, inp), {}, {
-      width: 90,
-      flex: "none",
-      minWidth: 0
-    })
-  }))), e('div', {
-    style: card
-  }, e('span', {
-    style: sLabel
-  }, "天気"), e('div', {
-    style: {
-      display: "flex",
-      gap: 8,
-      flexWrap: "wrap"
-    }
-  }, WEATHER_OPTIONS.map(WeatherBtn)))].concat(_toConsumableArray(METRICS.map(function (m) {
-    return e('div', {
-      key: m.key,
-      style: card
-    }, e('div', {
-      style: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: 12
-      }
-    }, e('span', {
-      style: sLabel
-    }, m.label), levels[m.key] > 0 && e('span', {
-      style: {
-        fontSize: 13,
-        fontWeight: 600,
-        color: m.color
-      }
-    }, LEVEL_LABELS[levels[m.key]])), e(LevelPicker, {
-      value: levels[m.key],
-      onChange: function onChange(v) {
-        return setLevels(function (p) {
-          return _objectSpread(_objectSpread({}, p), {}, _defineProperty({}, m.key, v));
-        });
-      },
-      color: m.color
-    }));
-  })), [e('div', {
-    style: card
-  }, e('span', {
-    style: sLabel
-  }, "備考（任意）"), e('textarea', {
-    value: note,
-    onChange: function onChange(ev) {
-      return setNote(ev.target.value);
-    },
-    placeholder: "気になることや状況など...",
-    style: _objectSpread(_objectSpread({}, inp), {}, {
-      resize: "vertical",
-      minHeight: 80,
-      fontFamily: "inherit",
-      lineHeight: 1.5
-    })
-  })), e('button', {
-    onClick: save,
-    disabled: !canSave,
-    style: {
-      width: "100%",
-      padding: "16px",
-      borderRadius: 16,
-      border: "none",
-      cursor: canSave ? "pointer" : "not-allowed",
-      background: saved ? "#34C759" : canSave ? "#007AFF" : "#E5E5EA",
-      color: canSave || saved ? "#fff" : "#C7C7CC",
-      fontSize: 17,
-      fontWeight: 600,
-      boxShadow: canSave ? saved ? "0 4px 16px rgba(52,199,89,0.4)" : "0 4px 16px rgba(0,122,255,0.35)" : "none",
-      transition: "all 0.25s"
-    }
-  }, saved ? "✓ 保存しました" : "保存する"), !canSave && e('div', {
-    style: {
-      textAlign: "center",
-      fontSize: 13,
-      color: "#8E8E93",
-      marginTop: 10
-    }
-  }, "3項目すべてのレベルを選んでください")])),
+  tab === "record" && e(RecordForm, {
+    initial: null,
+    onSave: handleSaveNew,
+    onCancel: null,
+    isEdit: false
+  }),
   // グラフタブ
   tab === "graph" && e('div', {
     style: {
@@ -750,8 +846,22 @@ function App() {
       }
     });
   }))))))),
-  // 履歴タブ
-  tab === "history" && e('div', {
+  // 履歴タブ（一覧 or 編集）
+  tab === "history" && (editEntry
+  // 編集画面
+  ? e(RecordForm, {
+    initial: editEntry,
+    onSave: handleSaveEdit,
+    onCancel: function onCancel() {
+      return setEditEntry(null);
+    },
+    isEdit: true,
+    onDelete: function onDelete() {
+      return handleDelete(editEntry.id);
+    }
+  })
+  // 一覧
+  : e('div', {
     style: {
       padding: "16px 16px 20px"
     }
@@ -771,23 +881,39 @@ function App() {
       fontSize: 17,
       fontWeight: 500
     }
-  }, "記録がありません")) : entries.map(function (ent) {
-    var worst = Math.max(ent.itch, ent.redness, ent.flush || 0);
+  }, "記録がありません")) : entries.map(function (en) {
+    var worst = Math.max(en.itch, en.redness, en.flush || 0);
     var wColor = ["", "#34C759", "#A3E635", "#FF9F0A", "#FF6B6B", "#FF3B30"][worst];
     var wo = WEATHER_OPTIONS.find(function (w) {
-      return w.label === ent.weather;
+      return w.label === en.weather;
     });
     return e('div', {
-      key: ent.id,
+      key: en.id,
+      onClick: function onClick() {
+        return setEditEntry(en);
+      },
       style: _objectSpread(_objectSpread({}, card), {}, {
-        padding: "14px 16px"
+        padding: "14px 16px",
+        cursor: "pointer",
+        position: "relative"
       })
-    }, e('div', {
+    },
+    // 編集ヒント
+    e('div', {
+      style: {
+        position: "absolute",
+        top: 14,
+        right: 14,
+        fontSize: 11,
+        color: "#C7C7CC"
+      }
+    }, "タップで編集 ›"), e('div', {
       style: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-start",
-        marginBottom: 12
+        marginBottom: 12,
+        paddingRight: 60
       }
     }, e('div', null, e('div', {
       style: {
@@ -795,13 +921,13 @@ function App() {
         fontWeight: 600,
         color: "#1C1C1E"
       }
-    }, fmtFull(ent.datetime)), e('div', {
+    }, fmtFull(en.datetime)), e('div', {
       style: {
         fontSize: 13,
         color: "#8E8E93",
         marginTop: 2
       }
-    }, (wo ? wo.emoji : "🌈") + " " + ent.weather)), e('div', {
+    }, (wo ? wo.emoji : "🌈") + " " + en.weather)), e('div', {
       style: {
         width: 10,
         height: 10,
@@ -836,7 +962,7 @@ function App() {
           flex: 1
         }
       }, e(ScoreBar, {
-        value: ent[m.key] || 0,
+        value: en[m.key] || 0,
         color: m.color
       })), e('div', {
         style: {
@@ -846,19 +972,28 @@ function App() {
           width: 16,
           textAlign: "right"
         }
-      }, ent[m.key] || 0));
-    })), ent.note && e('div', {
+      }, en[m.key] || 0));
+    })), en.food && e('div', {
       style: {
         marginTop: 10,
-        padding: "8px 12px",
+        padding: "7px 12px",
+        background: "#F2F2F7",
+        borderRadius: 10,
+        fontSize: 13,
+        color: "#3C3C43"
+      }
+    }, "🍽️ " + en.food), en.note && e('div', {
+      style: {
+        marginTop: 6,
+        padding: "7px 12px",
         background: "#F2F2F7",
         borderRadius: 10,
         fontSize: 13,
         color: "#3C3C43",
         lineHeight: 1.5
       }
-    }, ent.note));
-  })),
+    }, "📝 " + en.note));
+  }))),
   // 分析タブ
   tab === "analyze" && e('div', {
     style: {
@@ -897,7 +1032,7 @@ function App() {
       fontWeight: 700,
       color: "#007AFF"
     }
-  }, "全" + entries.length + "件"), "の記録をClaudeが分析します。"), !apiKey && e('div', {
+  }, "全" + entries.length + "件"), "の記録から天気・食べ物・備考と症状の相関関係を分析します。"), !apiKey && e('div', {
     style: {
       fontSize: 13,
       color: "#FF3B30",
@@ -1033,7 +1168,8 @@ function App() {
     return e('button', {
       key: t.id,
       onClick: function onClick() {
-        return setTab(t.id);
+        setEditEntry(null);
+        setTab(t.id);
       },
       style: {
         flex: 1,
